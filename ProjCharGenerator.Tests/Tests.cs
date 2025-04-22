@@ -65,14 +65,14 @@ namespace ProjCharGenerator.Tests
         {
             WordsGenerator generator = new(projectDirectory);
             Assert.Equal(10, generator.size);
-            Assert.Equal(1655714, generator.summa);
+            Assert.Equal(16557140, generator.summa);
         }
 
         [Fact]
         public void Test8()
         {
             WordsGenerator generator = new(projectDirectory);
-            Assert.Equal(126844, generator.GetWeight("im"));
+            Assert.Equal(1268440, generator.GetWeight("im"));
         }
 
         [Fact]
