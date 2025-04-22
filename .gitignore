@@ -1,0 +1,9 @@
+﻿################################################################################
+# Данный GITIGNORE-файл был автоматически создан Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/ProjCharGenerator/bin/Debug
+/ProjCharGenerator/obj
+/ProjCharGenerator.Tests/bin/Debug/net8.0
+/ProjCharGenerator.Tests/obj
