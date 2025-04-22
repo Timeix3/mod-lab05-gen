@@ -25,14 +25,14 @@ namespace ProjCharGenerator.Tests
         public void Test3()
         {
             BigramsGenerator generator = new(projectDirectory);
-            Assert.Equal(917165, generator.GetWeight("ае"));
+            Assert.Equal(917165, generator.GetWeight("af"));
         }
 
         [Fact]
         public void Test4()
         {
             BigramsGenerator generator = new(projectDirectory);
-            var bigrams = new[] { "аа", "аб", "ав", "аг", "ад", "ае", "аё", "аж", "аз", "аи" };
+            var bigrams = new[] { "aa", "ab", "ac", "ad", "ae", "af", "ag", "ah", "ai", "aj" };
             string result = generator.GetSym();
             Assert.Contains(result, bigrams);
         }
@@ -50,7 +50,7 @@ namespace ProjCharGenerator.Tests
                 else
                     statistics.Add(bigram, 1);
             }
-            Assert.Equal((double)generator.GetWeight("аа") / generator.summa, statistics["аа"] / 10000.0, 1);
+            Assert.Equal((double)generator.GetWeight("aa") / generator.summa, statistics["aa"] / 10000.0, 1);
         }
 
         [Fact]
@@ -72,14 +72,14 @@ namespace ProjCharGenerator.Tests
         public void Test8()
         {
             WordsGenerator generator = new(projectDirectory);
-            Assert.Equal(126844, generator.GetWeight("я"));
+            Assert.Equal(126844, generator.GetWeight("im"));
         }
 
         [Fact]
         public void Test9()
         {
             WordsGenerator generator = new(projectDirectory);
-            var words = new[] { "и", "в", "не", "на", "я", "быть", "он", "с", "что", "а" };
+            var words = new[] { "and", "in", "not", "on", "im", "be", "him", "with", "what", "a" };
             string result = generator.GetSym();
             Assert.Contains(result, words);
         }
@@ -97,7 +97,7 @@ namespace ProjCharGenerator.Tests
                 else
                     statistics.Add(word, 1);
             }
-            Assert.Equal((double)generator.GetWeight("и") / generator.summa, statistics["и"] / 10000.0, 1);
+            Assert.Equal((double)generator.GetWeight("and") / generator.summa, statistics["and"] / 10000.0, 1);
         }
     }
 }
